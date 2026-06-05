@@ -6,8 +6,7 @@ try {
     $jokes = $pdo->query($sql);
 
 } catch (PDOException $e) {
-    $error = 'Unable to connect to the database server: '
-           . $e->getMessage();
+    $error = 'Unable to connect to the database server: ' . $e->getMessage();
 }
 
 include 'templates/jokes.html.php';

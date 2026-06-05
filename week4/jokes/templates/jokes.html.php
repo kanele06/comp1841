@@ -19,11 +19,7 @@
             </td>
             <td width="150px">
                 <?php
-                    $display_date = date(
-                        "D d M Y",
-                        strtotime($joke['jokedate'])
-                    );
-                ?>
+                    $display_date = date("D d M Y",strtotime($joke['jokedate']));?>
                 <?= htmlspecialchars($display_date, ENT_QUOTES, 'UTF-8') ?>
             </td>
             <td width="150px">
