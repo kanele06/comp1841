@@ -13,8 +13,10 @@ try{
             ON post.userid = user.id
         INNER JOIN module
             ON post.moduleid = module.id';
-    $posts = $pdo->query($sql);
+
+    $posts = allPosts($pdo);
     $title = 'Post List';
+    $totalPosts = totalPosts($pdo);
 
     ob_start();
     include 'templates/posts.html.php';

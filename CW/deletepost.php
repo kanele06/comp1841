@@ -1,12 +1,12 @@
 <?php
 try {
     include 'includes/DatabaseConnection.php';
-
-    $sql = 'DELETE FROM post WHERE id = :id';
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindValue(':id', $_POST['id']);
-    $stmt->execute();
-
+    include 'includes/DataBaseFunctions.php';
+    // $sql = 'DELETE FROM post WHERE id = :id';
+    // $stmt = $pdo->prepare($sql);
+    // $stmt->bindValue(':id', $_POST['id']);
+    // $stmt->execute();
+    deletePost($pdo, $_POST['id']);
     header('location: posts.php');
 } catch (PDOException $e) {
     $title = 'An error has occurred';

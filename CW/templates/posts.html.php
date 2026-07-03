@@ -20,7 +20,7 @@
         </div>
 
     <?php else: ?>
-
+        <p>There are <?= $totalPosts ?> posts in the forum.</p>
         <?php foreach ($posts as $post): ?>
 
             <div class="post">
